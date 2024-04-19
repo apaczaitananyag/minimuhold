@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,100&display=swap');
+:root{
+	--primary-color: #141414;
+	--secondary-color: #000000;
+	--font: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background: black;
+	font-family: var(--font);
+    overflow:hidden;
+}
+nav{
+    background-color:#00000088;
+	position: fixed;
+	width: 100vw;
+	height: 60px;
+	border-top: .5rem solid var(--primary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 999999;
+}
+
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 55px;
+	width: 15%;
+	font-weight: 700;
+}
+
+.logo::before{
+	content: "GYM";
+	background: linear-gradient(180deg, #00C7C4 0.52%, #004A9B 99.48%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	
+}
+.logo::after{
+	content: "STANDARDS";
+	color: white;
+}
+ul{
+	display: flex;
+	align-items: center;
+	height: 60px;
+}
+
+ul a{
+	text-decoration: none;
+	color: white;
+	margin: 0 2rem;
+	text-transform: uppercase;
+	font-family: var(--font);
+	font-weight: 700;
+	font-size: 16px;
+}
+ul li{
+	list-style: none;
+}
+ul a:hover{
+	color: var(--primary-color);
+}
+
+#slideshow
+{
+    margin-top: 2%;
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    animation: slideBg 10s linear infinite 3s;
+    animation-timing-function: ease-in-out;
+    background-image: url('../gymstandards/about/1.png'); 
+}
+
+@keyframes slideBg {
+    0% {
+        background-image: url('../gymstandards/about/1.png');
+    }
+    25% 
+    {
+        background-image: url('../gymstandards/about/2.png');    
+    }
+    50% {
+        background-image: url('../gymstandards/about/3.png');     
+    }
+    75% {
+        background-image: url('../gymstandards/about/4.png');     
+    }
+    100% {
+        background-image: url('../gymstandards/about/1.png');     
+    }
+}
+
+.text {
+    color:white;
+    padding: -500px;
+    border: 5px solid rgb(0, 162, 173);
+}
+.text h1{
+    background: -webkit-linear-gradient(45deg, #28bafdb9 75%, #00969b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 30%;
+    position: absolute;
+    margin-left: 5%;
+    font-weight: 800;
+    font-size: 800%;
+}
+.text p{
+    font-weight: 500;
+    font-size: 27px;
+    top: 53%;
+    margin-left: 5%;
+    margin-right: 30%;
+    position: absolute;
+    color:white;
+}
+
